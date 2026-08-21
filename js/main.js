@@ -16,7 +16,7 @@ var FORM_ENDPOINT = "";
    relabels itself. While this is empty they both fall back to email,
    so neither is ever a dead control.
    ------------------------------------------------------------------ */
-var INTEREST_FORM_URL = "";
+var INTEREST_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfcyxtvMmibKBIx5zs8umNMJHdaSRjgLyagau2Ux55LMOSFIw/viewform";
 
 /* ------------------------------------------------------------------
    Confirmed / Who's Coming — the team wall.
@@ -63,8 +63,8 @@ var TEAMS = [
   { name: "Silverbacks",          state: "ID", slug: "silverbacks" },
   { name: "Sacramento Jesuit",    state: "CA", slug: "sacramento-jesuit" },
   { name: "Mountain View",        state: "UT", slug: "mountain-view" },
-  { name: "Majestics",            state: "UT", slug: "majestics", dark: true },
-  { name: "Emmett Rugby Club",    state: "ID", slug: "emmett", dark: true },
+  { name: "Majestics",            state: "UT", slug: "majestics" },
+  { name: "Emmett Rugby Club",    state: "ID", slug: "emmett" },
   { name: "Cen Cal",              state: "CA", slug: "cen-cal" },
   { name: "Provo Steelers",       state: "UT", slug: "provo-steelers" },
   { name: "Santa Monica",         state: "CA", slug: "santa-monica" },

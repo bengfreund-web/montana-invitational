@@ -1688,3 +1688,7 @@ a.card-link:hover { text-decoration: underline; }
   background: var(--primary-dark);
   border-color: var(--primary-dark);
 }
+
+.division-row--six { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 720px) { .division-row--six { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .division-row--six { grid-template-columns: 1fr; } }
