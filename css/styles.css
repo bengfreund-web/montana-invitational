@@ -1,9 +1,9 @@
 :root {
   /* Sampled from the Montana Invitational mark */
-  --primary: #241a0c;        /* deep leather brown */
-  --primary-dark: #17100a;
-  --accent: #c9a227;         /* gold: accents, icons, large display type only */
-  --accent-deep: #a8851c;
+  --primary: #14294d;        /* deep navy blue */
+  --primary-dark: #0b1a34;
+  --accent: #eab02d;         /* gold: accents, icons, large display type only */
+  --accent-deep: #c6901c;
   --accent-text: #7a5f1f;    /* darkened bronze, passes AA on white for small text */
   --bronze: #8c6e2a;         /* brand mid: secondary fills, borders */
   --gray: #60655f;
@@ -216,7 +216,7 @@ p { margin: 0 0 1em; }
   color: var(--white);
   box-shadow: inset 4px 0 0 var(--accent);
 }
-.btn-primary:hover { background: #3a2914; box-shadow: inset 6px 0 0 var(--accent); }
+.btn-primary:hover { background: #1e3a66; box-shadow: inset 6px 0 0 var(--accent); }
 
 .btn-ghost {
   background: transparent;
@@ -371,8 +371,8 @@ body.poster-only .hero-poster { display: block; }
   opacity: 0;
   will-change: opacity;
   background:
-    linear-gradient(to top, rgba(23,16,10,0.94) 0%, rgba(23,16,10,0.58) 45%, rgba(23,16,10,0) 80%),
-    linear-gradient(to right, rgba(23,16,10,0.72) 0%, rgba(23,16,10,0) 58%);
+    linear-gradient(to top, rgba(11,26,52,0.94) 0%, rgba(11,26,52,0.58) 45%, rgba(11,26,52,0) 80%),
+    linear-gradient(to right, rgba(11,26,52,0.72) 0%, rgba(11,26,52,0) 58%);
 }
 
 /* The hero runs wider than the 1120px content column and lines up with the
@@ -509,7 +509,7 @@ body.poster-only .hero-poster { display: block; }
 @media (max-width: 900px) {
   .hero-scrim {
     background: linear-gradient(to top,
-      rgba(23,16,10,0.92) 0%, rgba(23,16,10,0.5) 50%, rgba(23,16,10,0) 85%);
+      rgba(11,26,52,0.92) 0%, rgba(11,26,52,0.5) 50%, rgba(11,26,52,0) 85%);
   }
 }
 
@@ -613,7 +613,7 @@ a.card-link:hover { text-decoration: underline; }
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: rgba(201, 162, 39, 0.14);
+  background: rgba(234, 176, 45, 0.14);
   color: var(--accent-text);
   margin-bottom: 16px;
 }
@@ -780,7 +780,7 @@ a.card-link:hover { text-decoration: underline; }
 .field textarea:focus {
   outline: none;
   border-color: var(--accent-text);
-  box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.18);
+  box-shadow: 0 0 0 3px rgba(234, 176, 45, 0.18);
 }
 
 .field-hp {
@@ -816,8 +816,8 @@ a.card-link:hover { text-decoration: underline; }
 .form-status.is-visible { display: block; }
 
 .form-status.is-success {
-  background: rgba(201, 162, 39, 0.12);
-  border: 1px solid rgba(201, 162, 39, 0.45);
+  background: rgba(234, 176, 45, 0.12);
+  border: 1px solid rgba(234, 176, 45, 0.45);
   color: var(--primary);
 }
 
@@ -1061,7 +1061,7 @@ a.card-link:hover { text-decoration: underline; }
 .basic:hover,
 .basic:focus-visible {
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(36, 26, 12, 0.10);
+  box-shadow: 0 6px 18px rgba(20, 41, 77, 0.12);
   border-color: var(--accent-text);
   border-left-color: var(--accent);
 }
@@ -1256,7 +1256,7 @@ a.card-link:hover { text-decoration: underline; }
 .basic:hover,
 .basic:focus-visible {
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(36, 26, 12, 0.10);
+  box-shadow: 0 6px 18px rgba(20, 41, 77, 0.12);
   border-color: var(--accent-text);
   border-left-color: var(--accent);
 }
@@ -1489,7 +1489,7 @@ a.card-link:hover { text-decoration: underline; }
 .team-tile:focus-within {
   transform: translateY(-2px);
   border-color: var(--accent);
-  box-shadow: 0 6px 18px rgba(36, 26, 12, 0.10);
+  box-shadow: 0 6px 18px rgba(20, 41, 77, 0.12);
 }
 
 /* The critical bit: the logo lives in a fixed-height flex box, so every
