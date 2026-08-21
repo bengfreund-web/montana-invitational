@@ -44,6 +44,9 @@ var TEAMS_COPY = {
   }
 };
 
+/* Each side that committed, with its real crest in img/teams/{slug}.png.
+   dark:true tiles get a dark logo chip — for light/knockout logos (white or
+   pale line-art) that would otherwise vanish on the white card. */
 var TEAMS = [
   { name: "Gallatin",             state: "MT", slug: "gallatin" },
   { name: "Kahuku",               state: "HI", slug: "kahuku" },
@@ -60,15 +63,18 @@ var TEAMS = [
   { name: "Silverbacks",          state: "ID", slug: "silverbacks" },
   { name: "Sacramento Jesuit",    state: "CA", slug: "sacramento-jesuit" },
   { name: "Mountain View",        state: "UT", slug: "mountain-view" },
-  { name: "Majestics",            state: "UT", slug: "majestics" },
-  { name: "Emmett Rugby Club",    state: "ID", slug: "emmett" },
+  { name: "Majestics",            state: "UT", slug: "majestics", dark: true },
+  { name: "Emmett Rugby Club",    state: "ID", slug: "emmett", dark: true },
   { name: "Cen Cal",              state: "CA", slug: "cen-cal" },
   { name: "Provo Steelers",       state: "UT", slug: "provo-steelers" },
   { name: "Santa Monica",         state: "CA", slug: "santa-monica" },
   { name: "Beaverton Barbarians", state: "OR", slug: "beaverton-barbarians" },
   { name: "Eastside Lions",       state: "WA", slug: "eastside-lions" },
   { name: "Wasatch Rugby",        state: "UT", slug: "wasatch" },
-  { name: "Rampage Rugby",        state: "ID", slug: "rampage" }
+  { name: "Rampage Rugby",        state: "ID", slug: "rampage" },
+  { name: "Bitterroot Warriors",  state: "MT", slug: "bitterroot-warriors" },
+  { name: "Summit Storm",         state: "OR", slug: "summit-storm" },
+  { name: "Rigby Royals",         state: "ID", slug: "rigby-royals", dark: true }
 ];
 
 function renderTeams() {
@@ -93,7 +99,7 @@ function renderTeams() {
     tile.className = "team-tile reveal";
 
     var box = document.createElement("div");
-    box.className = "team-logo";
+    box.className = t.dark ? "team-logo is-dark" : "team-logo";
     var img = document.createElement("img");
     img.src = "img/teams/" + t.slug + ".png";
     img.alt = t.name + " rugby club logo";

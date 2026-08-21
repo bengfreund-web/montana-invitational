@@ -106,7 +106,7 @@ screens) and drop it into `assets/`.
 6. **Merch content** — `merch.html` is a placeholder; product content goes in the marked block.
 7. **Edition number** — the source site said "2nd Annual" against 2026 dates. If the April 2026
    edition was played, 2027 is the 3rd Annual. No ordinal is printed until confirmed.
-8. **Entry fee ($950) and the five divisions** — 2026 figures; confirm they carry to 2027.
+8. **Entry fee ($995) and the five divisions** — 2026 figures; confirm they carry to 2027.
 9. **States count** — derived from the data as **8** (MT, HI, UT, TX, WA, ID, CA, OR); the build
    spec's "9 states" was superseded by the data and the FAQ's own 8-state list.
 10. **Custom domain** — canonical/OG/sitemap/robots point at the GitHub Pages URL. If

@@ -1674,3 +1674,17 @@ a.card-link:hover { text-decoration: underline; }
   line-height: 1.35;
 }
 @media (max-width: 520px) { .detail-grid { grid-template-columns: 1fr; } }
+
+/* Dark chip for light/knockout team logos that would vanish on the white card. */
+.team-logo.is-dark {
+  background: var(--primary-dark);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+@media (max-width: 720px) { .team-logo.is-dark { padding: 12px; } }
+
+/* Dark partner tile — for the MIS mark, which is gold + white on transparent. */
+.partner-tile.dark {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
