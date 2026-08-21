@@ -45,13 +45,13 @@
   const MAIN_RISE_PX    = 40;     /* extra rise applied to the page content */
 
   const MOBILE_BP            = 768;    /* "small screen" threshold */
-  const FULLRES_MIN_WIDTH    = 1600;   /* only large screens get the 17MB rung */
+  const FULLRES_MIN_WIDTH    = 1024;   /* at or above this, serve the full-res rung */
 
   /* Loading screen: hold the page until the hero has actually buffered, so the
      first thing anyone sees is the full-resolution film rather than a poster
      snapping to video. Never open-ended — LOADER_TIMEOUT_MS is the hard stop. */
-  const LOADER_TIMEOUT_MS    = 4000;
-  const LOADER_TARGET        = 0.12;   /* dismiss once a little has buffered */
+  const LOADER_TIMEOUT_MS    = 20000;
+  const LOADER_TARGET        = 0.995;  /* buffered fraction counted as "loaded" */
   const POSTER_ONLY_UNDER_BP = false;  /* true = poster still below MOBILE_BP */
 
   /* ====================================================================== */
@@ -308,9 +308,6 @@
     video.addEventListener("canplaythrough", function () {
       if (bufferedFraction() >= LOADER_TARGET) dismissLoader();
     });
-    /* First playable frame is enough — do not wait for the whole clip. */
-    video.addEventListener("loadeddata", dismissLoader);
-    video.addEventListener("canplay", dismissLoader);
     loaderPoll = setInterval(function () {
       var f = bufferedFraction();
       setLoaderProgress(f);
