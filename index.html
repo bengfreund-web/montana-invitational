@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Montana Invitational High School Rugby Tournament | April 24&ndash;25, 2027 · Bozeman, Montana</title>
+<meta name="description" content="The Montana Invitational High School Rugby Tournament. Two days at Bozeman Sports Park, Saturday 24 and Sunday 25 April 2027. Boys and girls XVs across five divisions.">
+<!-- Canonical/OG URLs point at the live GitHub Pages address. If a custom
+     domain (montanainvitational.com) is added later, swap these plus
+     sitemap.xml and robots.txt, and add a CNAME file, or search engines keep
+     indexing the github.io URL. -->
+<link rel="canonical" href="https://bengfreund-web.github.io/montana-invitational/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bengfreund-web.github.io/montana-invitational/">
+<meta property="og:title" content="Montana Invitational High School Rugby Tournament">
+<meta property="og:description" content="The Montana Invitational High School Rugby Tournament. Two days at Bozeman Sports Park, Saturday 24 and Sunday 25 April 2027. Boys and girls XVs across five divisions.">
+<meta property="og:image" content="https://bengfreund-web.github.io/montana-invitational/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Montana Invitational High School Rugby Tournament">
+<meta name="twitter:description" content="The Montana Invitational High School Rugby Tournament. Two days at Bozeman Sports Park, Saturday 24 and Sunday 25 April 2027. Boys and girls XVs across five divisions.">
+<meta name="twitter:image" content="https://bengfreund-web.github.io/montana-invitational/img/og-image.png">
+<meta name="theme-color" content="#241a0c">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css?v=20260821">
+<!-- Set before first paint: CSS hides the hero copy only when JS is
+     available to animate it back in, so nothing flashes on load and
+     no-JS users still get the full hero. -->
+<script>document.documentElement.className += " js";</script>
+</head>
+<body>
+
+<a class="skip-link" href="#top">Skip to main content</a>
+
+<!-- Shown while the full-resolution hero buffers. CSS reveals it only when the
+     `js` class is present, and hero-sequence.js dismisses it immediately for
+     poster-only clients, on error, or on a hard timeout — it can never trap
+     anyone behind it. -->
+<div class="site-loader" id="siteLoader" role="status" aria-label="Loading the tournament film">
+  <img class="loader-mark" src="img/mi-logo-white.png" alt="Montana Invitational">
+  <div class="loader-bar"><span class="loader-fill" id="loaderFill"></span></div>
+  <p class="loader-pct" id="loaderPct">Loading&hellip;</p>
+</div>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="wordmark" href="#top">
+      <img src="img/mi-logo.png" alt="Montana Invitational">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="siteNav">
+      <a href="#basics">About</a>
+      <a href="#format">Format</a>
+      <a href="#divisions">Divisions</a>
+      <a href="#teams">Teams</a>
+      <a href="#resources">Plan Your Trip</a>
+      <a class="nav-cta" href="#interest">Register Interest</a>
+    </nav>
+  </div>
+</header>
+
+  <!-- ======================================================================
+       HERO SCROLL SEQUENCE
+       Tall track + sticky pin. One <video> as the base layer, driven off a
+       single normalised progress value; see js/hero-sequence.js.
+       ====================================================================== -->
+  <div class="hero-track" id="heroTrack">
+    <div class="hero-pin" id="heroPin">
+
+      <div class="hero-media" id="heroMedia">
+        <!-- preload="none" and no autoplay attribute on purpose: nothing is
+             fetched until pickSources() has chosen a tier, so poster-only
+             clients (reduced motion, Save-Data, small screens) pay nothing. -->
+        <video id="heroVideo" muted loop playsinline preload="none"
+               poster="assets/hero-poster.jpg" aria-hidden="true" tabindex="-1">
+          <!-- AV1 first. The `media` attribute on <source> is specced but
+               ignored by shipping browsers, so pickSources() rebuilds this
+               list from matchMedia at runtime; this markup is the no-JS path. -->
+          <source src="assets/hero.av1.webm" type="video/webm; codecs=av01.0.05M.08" media="(min-width: 1280px)">
+          <source src="assets/hero.h264.mp4" type="video/mp4; codecs=avc1.640028" media="(min-width: 1280px)">
+          <source src="assets/hero-1280.av1.webm" type="video/webm; codecs=av01.0.05M.08">
+          <source src="assets/hero-1280.mp4" type="video/mp4; codecs=avc1.640028">
+        </video>
+        <img class="hero-poster" src="assets/hero-poster.webp" alt="" aria-hidden="true">
+      </div>
+
+      <div class="hero-scrim" id="heroScrim"></div>
+
+      <!-- Copy is in the DOM at all times and never hidden from AT; it is
+           only ever transformed, so keyboard and screen reader users get the
+           whole hero without scrolling. -->
+
+      <div class="hero-content" id="heroContent">
+        <div class="wrap">
+          <img class="hero-mark hero-line" src="img/mi-logo-white.png" alt="" aria-hidden="true">
+          <h1 class="hero-title hero-line">Montana Invitational</h1>
+          <p class="hero-date hero-line">SATURDAY <span>24</span> &ndash; SUNDAY <span>25</span> APRIL 2027</p>
+          <p class="hero-venue hero-line">Bozeman Sports Park &middot; Bozeman, MT</p>
+          <div class="hero-divider hero-line"></div>
+          <p class="hero-sub hero-line">The Montana Invitational High School Rugby Tournament &mdash; two days of boys and girls XVs across five divisions, in the heart of Big Sky country.</p>
+        </div>
+      </div>
+
+      <div class="scroll-cue" id="scrollCue" aria-hidden="true"><span></span></div>
+    </div>
+  </div>
+
+<main id="top">
+
+  <!-- The four things a coach needs before anything else. One line each;
+       every card links down to the section that answers it in full. -->
+  <section id="basics" class="section section-alt basics-section">
+    <div class="wrap">
+      <p class="eyebrow reveal">The Basics</p>
+      <h2 class="reveal">What You Need to Know</h2>
+
+      <div class="basics-grid">
+        <a class="basic reveal" href="#format">
+          <span class="basic-label">Format</span>
+          <span class="basic-value">Fifteen a side</span>
+          <span class="basic-note">Two days, four matches per team</span>
+        </a>
+        <a class="basic reveal" href="#divisions">
+          <span class="basic-label">Divisions</span>
+          <span class="basic-value">Five divisions</span>
+          <span class="basic-note">Boys and girls, U19 and U16</span>
+        </a>
+        <a class="basic reveal" href="#cost">
+          <span class="basic-label">Cost</span>
+          <span class="basic-value">$950</span>
+          <span class="basic-note">Per team, entry for both days</span>
+        </a>
+        <a class="basic reveal" href="#resources">
+          <span class="basic-label">Location</span>
+          <span class="basic-value">Bozeman, MT</span>
+          <span class="basic-note">Bozeman Sports Park, grass and turf</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Format: how the tournament actually runs. Same card component as The
+       Basics, six facts across. -->
+  <section id="format" class="section format-section">
+    <div class="wrap">
+      <p class="eyebrow reveal">Format</p>
+      <h2 class="reveal section-title-sm">How It Runs</h2>
+
+      <div class="basics-grid format-grid">
+        <div class="basic reveal">
+          <span class="basic-label">Match Format</span>
+          <span class="basic-value">XVs, 45 minute matches (22.5 minute halves)</span>
+        </div>
+        <div class="basic reveal">
+          <span class="basic-label">Schedule</span>
+          <span class="basic-value">Day 1: two pool matches. Day 2: semifinal and final</span>
+        </div>
+        <div class="basic reveal">
+          <span class="basic-label">Guaranteed Matches</span>
+          <span class="basic-value">Four per team</span>
+        </div>
+        <div class="basic reveal">
+          <span class="basic-label">Seeding</span>
+          <span class="basic-value">Off GRR rankings, or by geography where unranked, so local sides avoid each other</span>
+        </div>
+        <div class="basic reveal">
+          <span class="basic-label">Field</span>
+          <span class="basic-value">50 total teams</span>
+        </div>
+        <div class="basic reveal">
+          <span class="basic-label">Eligibility</span>
+          <span class="basic-value">USA Rugby Youth &amp; High School eligible</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="divisions" class="section section-alt divisions-section">
+    <div class="wrap">
+      <p class="eyebrow reveal">Divisions</p>
+      <h2 class="reveal section-title-sm">Who Takes the Pitch</h2>
+
+      <div class="division-row division-row--five">
+        <div class="division reveal"><h3>U19 Boys Elite</h3></div>
+        <div class="division reveal"><h3>U19 Boys Premier</h3></div>
+        <div class="division reveal"><h3>U19 Girls Elite</h3></div>
+        <div class="division reveal"><h3>U19 Girls Premier</h3></div>
+        <div class="division reveal"><h3>U16 Boys Elite</h3></div>
+      </div>
+      <p class="division-note reveal">All players must be USA Rugby Youth &amp; High School eligible.
+      Proof of age is required at check-in. Divisions are provisional and subject to entry numbers.</p>
+    </div>
+  </section>
+
+  <figure class="photo-band photo-figure reveal">
+    <img src="img/bozeman-sports-park.jpg"
+         alt="Aerial view of the rugby pitches at Bozeman Sports Park, with the Bridger range on the horizon"
+         loading="lazy" width="1920" height="1080">
+    <figcaption><em>Bozeman Sports Park, Bozeman, Montana.</em></figcaption>
+  </figure>
+
+  <section id="cost" class="section section-alt essentials-section">
+    <div class="wrap">
+      <p class="eyebrow reveal">Entry</p>
+      <h2 class="reveal section-title-sm">Squad and Cost</h2>
+
+      <div class="essentials-grid">
+        <div class="essential reveal">
+          <p class="essential-figure">4<span>matches</span></p>
+          <p class="essential-note">Guaranteed across both days of competition.</p>
+        </div>
+        <div class="essential reveal">
+          <p class="essential-figure">$950<span>per team</span></p>
+          <p class="essential-note">Entry only. Travel, lodging and meals not included.</p>
+        </div>
+      </div>
+
+      <!-- Registration payment link is not set yet (open item), so the primary
+           CTA renders as a disabled "coming soon" control rather than a dead
+           link. Wire it up by swapping this span for a live <a class="btn
+           btn-primary" href="…">. -->
+      <div class="cost-actions reveal">
+        <span class="btn btn-disabled" role="link" aria-disabled="true" title="Registration payment opens later">Registration payment &mdash; coming soon</span>
+        <a class="btn btn-ghost" href="#interest">Expression of Interest</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Confirmed / Who's Coming. Rendered from the TEAMS array in js/main.js so
+       adding a side is one line, and the counts derive from the data so they
+       cannot go stale. Currently framed as "Who Played in 2026" (Option A) —
+       flip TEAMS_MODE to "confirmed" and empty TEAMS to switch to the 2027
+       confirmed-entries framing. -->
+  <section id="teams" class="section teams-section">
+    <div class="wrap">
+      <p class="eyebrow reveal" id="teamsEyebrow">Last Year</p>
+      <h2 class="reveal section-title-sm" id="teamsTitle">Who Played in 2026</h2>
+      <p class="teams-sub reveal" id="teamsSub">24 teams came to Bozeman in 2026.</p>
+
+      <div class="team-grid" id="teamGrid"></div>
+
+      <p class="teams-more reveal">Want your team on this list in 2027?
+        <a href="#interest">Register your interest</a>.</p>
+    </div>
+  </section>
+
+  <section id="interest" class="section section-alt form-section">
+    <div class="wrap">
+      <h2 class="reveal">Expression of Interest</h2>
+      <!-- Both this link and the button below point at INTEREST_FORM_URL in
+           js/main.js once it is set; until then they fall back to email. -->
+      <p class="lede reveal">Complete the expression of interest form
+        <a class="interest-form-link" id="interestFormLink" href="mailto:jd@sportmontana.org?subject=Montana%20Invitational%202027%20%E2%80%94%20Expression%20of%20Interest&amp;body=First%20name%3A%0ALast%20name%3A%0AClub%20or%20school%3A%0ACity%20and%20state%3A%0ARole%3A%0AEmail%3A%0ACell%3A%0ADivision%20interested%20in%3A%0AEstimated%20number%20of%20teams%3A%0AAnything%20we%20should%20know%3F%3A">here</a>
+        to register your team's interest.</p>
+
+      <form class="eoi-form reveal" id="eoiForm" novalidate>
+        <div class="field-row">
+          <div class="field">
+            <label for="firstName">First name</label>
+            <input type="text" id="firstName" name="firstName" autocomplete="given-name" required>
+          </div>
+          <div class="field">
+            <label for="lastName">Last name</label>
+            <input type="text" id="lastName" name="lastName" autocomplete="family-name" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="organization">Club or school name</label>
+          <input type="text" id="organization" name="organization" autocomplete="organization" required>
+        </div>
+
+        <div class="field">
+          <label for="cityState">City and state</label>
+          <input type="text" id="cityState" name="cityState" placeholder="Bozeman, MT" required>
+        </div>
+
+        <div class="field">
+          <label for="role">Role</label>
+          <select id="role" name="role" required>
+            <option value="">Select one</option>
+            <option>Head coach</option>
+            <option>Assistant coach</option>
+            <option>Director</option>
+            <option>Athletic director</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="cell">Cell</label>
+            <input type="tel" id="cell" name="cell" autocomplete="tel" required>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="division">Division interested in</label>
+            <select id="division" name="division" required>
+              <option value="">Select one</option>
+              <option>U19 Boys Elite</option>
+              <option>U19 Boys Premier</option>
+              <option>U19 Girls Elite</option>
+              <option>U19 Girls Premier</option>
+              <option>U16 Boys Elite</option>
+              <option>More than one</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="teamCount">Estimated number of teams</label>
+            <input type="number" id="teamCount" name="teamCount" min="1" max="20" step="1" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="notes">Anything we should know? <span class="optional">(optional)</span></label>
+          <textarea id="notes" name="notes"></textarea>
+        </div>
+
+        <div class="field-hp" aria-hidden="true">
+          <label for="website">Leave this field empty</label>
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary" id="eoiSubmit">Submit expression of interest</button>
+          <p class="form-note">We will only use this to send tournament updates.</p>
+        </div>
+
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+
+      <!-- Shown in place of the form until FORM_ENDPOINT (or INTEREST_FORM_URL)
+           is set in js/main.js. A live button rather than a notice, so the
+           section still converts. -->
+      <div class="form-fallback" id="formFallback" hidden>
+        <a class="btn btn-primary" href="mailto:jd@sportmontana.org?subject=Montana%20Invitational%202027%20%E2%80%94%20Expression%20of%20Interest&amp;body=First%20name%3A%0ALast%20name%3A%0AClub%20or%20school%3A%0ACity%20and%20state%3A%0ARole%3A%0AEmail%3A%0ACell%3A%0ADivision%20interested%20in%3A%0AEstimated%20number%20of%20teams%3A%0AAnything%20we%20should%20know%3F%3A">Expression of Interest</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="resources" class="section">
+    <div class="wrap">
+      <p class="eyebrow reveal">Resources</p>
+      <h2 class="reveal">Plan Your Trip</h2>
+
+      <div class="resource-grid">
+        <div class="resource reveal">
+          <span class="icon-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16l20-6-20-6 4 6-4 6z"/><path d="M6 10h4"/></svg>
+          </span>
+          <h3>Getting There</h3>
+          <p>Bozeman Yellowstone International (BZN) is roughly 8 minutes from the pitches, with direct flights from cities across the country. Bert Mooney in Butte (BTM) is 1hr 19min, Helena Regional (HLN) is 1hr 35min, and Billings-Logan (BIL) is 2hr 16min.</p>
+          <a class="card-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Bozeman+Yellowstone+International+Airport&amp;destination=Bozeman+Sports+Park+Bozeman+MT" target="_blank" rel="noopener">Airport to venue &rarr;</a>
+        </div>
+        <div class="resource reveal">
+          <span class="icon-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          </span>
+          <h3>Venue</h3>
+          <p>Bozeman Sports Park offers four full sized grass rugby pitches and a state of the art turf field purpose built for rugby. Central to hotels, dining, and the major roads out to the scenery around Bozeman.</p>
+          <a class="card-link" href="https://www.google.com/maps/search/?api=1&amp;query=Bozeman+Sports+Park+Bozeman+MT" target="_blank" rel="noopener">View on Maps &rarr;</a>
+        </div>
+        <div class="resource reveal">
+          <span class="icon-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20V7a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v13"/><path d="M16 11h3a2 2 0 0 1 2 2v7"/><path d="M2 20h20M7 9h4M7 13h4"/></svg>
+          </span>
+          <h3>Accommodation</h3>
+          <p>Montana Institute of Sport has partnered with HBC Event Services. Competitive rates, 24/7 support, and priority bookings for the tournament. All travel party members are encouraged to book through HBC.</p>
+          <!-- HBC hotel booking URL not provided yet (open item): pending link
+               rather than a dead one. Swap for <a class="card-link" href="…">. -->
+          <span class="card-link is-pending">Find your hotel &mdash; coming soon</span>
+          <p class="resource-secondary">Questions:
+            <a href="tel:+15053460522">505-346-0522</a> ·
+            <a href="mailto:support@hbceventservices.com">support@hbceventservices.com</a></p>
+        </div>
+        <div class="resource reveal">
+          <span class="icon-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          </span>
+          <h3>Contact</h3>
+          <p>Get in touch with the tournament organizing team at the Montana Institute of Sport.</p>
+          <a class="card-link" href="mailto:jd@sportmontana.org">Contact Us &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section section-alt faq-section">
+    <div class="wrap">
+      <p class="eyebrow reveal" style="text-align:center;">FAQ</p>
+      <h2 class="reveal" style="text-align:center;">Frequently Asked Questions</h2>
+
+      <div class="faq-list">
+        <details class="faq-item reveal" open>
+          <summary>Who can enter?</summary>
+          <p>Any U19 or U16 high school or club program, boys or girls. Teams travel in from across the country. In 2026 sides came from Montana, Utah, Idaho, Washington, Oregon, California, Texas and Hawaii.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>What is the format?</summary>
+          <p>XVs across two days at Bozeman Sports Park. Day 1 is two pool matches, Day 2 is semifinals and finals. Every team is guaranteed four matches.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>How long are the matches?</summary>
+          <p>45 minutes, played as 22.5 minute halves.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>What are the divisions?</summary>
+          <p>Five: U19 Boys Elite, U19 Boys Premier, U19 Girls Elite, U19 Girls Premier, and U16 Boys Elite.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>How is seeding decided?</summary>
+          <p>Off GRR rankings where teams are ranked. Unranked teams are seeded by geography so local sides are not drawn against each other in pool play.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>What does the $950 cover?</summary>
+          <p>Entry for one team across both days, including four guaranteed matches. Travel, lodging and meals are not included.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>How many teams are in the field?</summary>
+          <p>Fifty across all five divisions.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Where is it played?</summary>
+          <p>Bozeman Sports Park in Bozeman, Montana. Four full sized grass pitches plus a purpose built turf rugby field.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>How do we get there?</summary>
+          <p>Fly into Bozeman Yellowstone International (BZN), about 8 minutes from the venue. Butte, Helena and Billings are the next closest airports.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Where do we stay?</summary>
+          <p>Through HBC Event Services, the tournament's lodging partner. Rates and availability are on the Find Your Hotel link. If booking is unavailable, contact HBC directly at 505-346-0522.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Can we referee?</summary>
+          <p>Yes. The tournament covers referee kit, twin share lodging and meals. Apply through the <a class="interest-form-link" href="referee.html">referee page</a>.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Is there merchandise?</summary>
+          <p>Details published closer to the event.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <div class="photo-pair">
+    <figure class="reveal">
+      <img src="img/action-2.jpg" alt="A ball carrier steps through a tackle in midfield"
+           loading="lazy" width="1400" height="933">
+    </figure>
+    <figure class="reveal">
+      <img src="img/action-3.jpg" alt="A player dives to ground the ball beside the posts"
+           loading="lazy" width="1400" height="932">
+    </figure>
+  </div>
+
+</main>
+
+<!-- Partners: small fixed-height tile row, same treatment as the team wall. -->
+<section class="partners" aria-label="Partners">
+  <div class="wrap">
+    <p class="eyebrow partners-label reveal">Partners</p>
+    <div class="partners-row">
+      <div class="partner-tile reveal"><img src="img/partners/chamber.png" alt="Bozeman Area Chamber of Commerce"></div>
+      <div class="partner-tile reveal"><img src="img/partners/mis.png" alt="Montana Institute of Sport"></div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact" class="site-footer">
+  <div class="wrap footer-event">
+    <p class="footer-event-title">The Montana Invitational High School Rugby Tournament &mdash; Saturday 24 and Sunday 25 April 2027</p>
+    <p class="footer-event-sub">Bozeman Sports Park, Bozeman, MT</p>
+  </div>
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <img class="footer-mark" src="img/mi-logo-white.png" alt="Montana Invitational">
+      <p>Organized by the <a href="https://montanainstituteofsport.org" target="_blank" rel="noopener">Montana Institute of Sport</a>, the nonprofit behind TRY Rugby and the Montana Youth Rugby Union.</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Tournament</h3>
+      <ul>
+        <li><a href="#basics">What You Need to Know</a></li>
+        <li><a href="#format">Format</a></li>
+        <li><a href="#divisions">Divisions</a></li>
+        <li><a href="#teams">Confirmed Teams</a></li>
+        <li><a href="#cost">Entry Fee</a></li>
+        <li><a href="#interest">Expression of Interest</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="referee.html">Referee</a></li>
+        <li><a href="merch.html">Merch</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Connect</h3>
+      <ul>
+        <li><a href="#resources">Venue</a></li>
+        <li><a href="#resources">Accommodation</a></li>
+        <li><a href="mailto:jd@sportmontana.org">jd@sportmontana.org</a></li>
+        <li><a href="https://montanainstituteofsport.org" target="_blank" rel="noopener">Montana Institute of Sport</a></li>
+        <li><a href="https://montanainstituteofsport.org/try-rugby-impact.html" target="_blank" rel="noopener">TRY Rugby</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>&copy; 2026 Montana Institute of Sport. All rights reserved.</p>
+    <p>Dates, venue, and divisions as currently planned. Format, fees, and schedule confirmed at registration.</p>
+  </div>
+</footer>
+
+<script src="js/main.js?v=20260821"></script>
+<script src="js/hero-sequence.js?v=20260821"></script>
+</body>
+</html>

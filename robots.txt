@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bengfreund-web.github.io/montana-invitational/sitemap.xml
