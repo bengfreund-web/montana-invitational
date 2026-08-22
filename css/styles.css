@@ -1693,3 +1693,84 @@ a.card-link:hover { text-decoration: underline; }
 .division-row--six { grid-template-columns: repeat(3, 1fr); }
 @media (max-width: 720px) { .division-row--six { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 480px) { .division-row--six { grid-template-columns: 1fr; } }
+
+/* ---------- Format: clean spec sheet (replaces the card grid) ----------
+   A scannable two-column fact list with hairline rules — reads like a
+   professional info sheet, not a wall of boxes. */
+.spec-list {
+  margin: 2.25rem 0 0;
+  max-width: 880px;
+}
+.spec {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  gap: 28px;
+  align-items: baseline;
+  padding: 16px 2px;
+  border-bottom: 1px solid var(--line);
+}
+.spec:first-child { border-top: 1px solid var(--line); }
+.spec dt {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.02rem;
+  letter-spacing: 0.01em;
+  color: var(--primary);
+}
+.spec dd {
+  margin: 0;
+  color: var(--gray);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+.spec dd strong { color: var(--charcoal); font-weight: 600; }
+
+@media (max-width: 600px) {
+  .spec { grid-template-columns: 1fr; gap: 4px; padding: 14px 2px; }
+  .spec dt {
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent-text);
+  }
+}
+
+/* ---------- Divisions: grouped Boys / Girls with pill tags ----------
+   Groups the six brackets by side so a coach finds their fit at a glance. */
+.division-groups {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 44px;
+  margin: 2rem 0 0;
+  max-width: 820px;
+}
+.div-group-title {
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin: 0 0 1em;
+  padding-bottom: 0.45em;
+  border-bottom: 2px solid var(--accent);
+  display: inline-block;
+}
+.div-tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.div-tags li {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--primary);
+  background: var(--off-white);
+}
+@media (max-width: 560px) {
+  .division-groups { grid-template-columns: 1fr; gap: 30px; }
+}

@@ -29,7 +29,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=1787371148">
+<link rel="stylesheet" href="css/styles.css?v=1787441136">
 <!-- Set before first paint: CSS hides the hero copy only when JS is
      available to animate it back in, so nothing flashes on load and
      no-JS users still get the full hero. -->
@@ -132,7 +132,7 @@
         <a class="basic reveal" href="#format">
           <span class="basic-label">Format</span>
           <span class="basic-value">Fifteen a side</span>
-          <span class="basic-note">Two days, four matches per team</span>
+          <span class="basic-note">Two days, four guaranteed matches</span>
         </a>
         <a class="basic reveal" href="#divisions">
           <span class="basic-label">Divisions</span>
@@ -142,12 +142,12 @@
         <a class="basic reveal" href="#cost">
           <span class="basic-label">Cost</span>
           <span class="basic-value">$995</span>
-          <span class="basic-note">Per team, entry for both days</span>
+          <span class="basic-note">Per team, both days included</span>
         </a>
         <a class="basic reveal" href="#resources">
           <span class="basic-label">Location</span>
           <span class="basic-value">Bozeman, MT</span>
-          <span class="basic-note">Bozeman Sports Park, grass and turf</span>
+          <span class="basic-note">Grass and turf, 8 min from BZN</span>
         </a>
       </div>
     </div>
@@ -160,32 +160,14 @@
       <p class="eyebrow reveal">Format</p>
       <h2 class="reveal section-title-sm">How It Runs</h2>
 
-      <div class="basics-grid format-grid">
-        <div class="basic reveal">
-          <span class="basic-label">Match Format</span>
-          <span class="basic-value">XVs, 45 minute matches (22.5 minute halves)</span>
-        </div>
-        <div class="basic reveal">
-          <span class="basic-label">Schedule</span>
-          <span class="basic-value">Day 1: two pool matches. Day 2: semifinal and final</span>
-        </div>
-        <div class="basic reveal">
-          <span class="basic-label">Guaranteed Matches</span>
-          <span class="basic-value">Four per team</span>
-        </div>
-        <div class="basic reveal">
-          <span class="basic-label">Seeding</span>
-          <span class="basic-value">Off GRR rankings, or by geography where unranked, so local sides avoid each other</span>
-        </div>
-        <div class="basic reveal">
-          <span class="basic-label">Field</span>
-          <span class="basic-value">50 total teams</span>
-        </div>
-        <div class="basic reveal">
-          <span class="basic-label">Eligibility</span>
-          <span class="basic-value">USA Rugby Youth &amp; High School eligible</span>
-        </div>
-      </div>
+      <dl class="spec-list reveal">
+        <div class="spec"><dt>Match format</dt><dd><strong>XVs</strong>, 45 minutes (two 22.5-minute halves)</dd></div>
+        <div class="spec"><dt>Guaranteed matches</dt><dd><strong>Four per team</strong> across the weekend</dd></div>
+        <div class="spec"><dt>Schedule</dt><dd>Day 1 pool play, then Day 2 semifinals and final</dd></div>
+        <div class="spec"><dt>Field</dt><dd>Up to <strong>50 teams</strong> across six divisions</dd></div>
+        <div class="spec"><dt>Seeding</dt><dd>GRR rankings first, then geography for unranked sides, so local teams don't meet in pools</dd></div>
+        <div class="spec"><dt>Eligibility</dt><dd>USA Rugby Youth &amp; High School eligible; proof of age at check-in</dd></div>
+      </dl>
     </div>
   </section>
 
@@ -194,16 +176,26 @@
       <p class="eyebrow reveal">Divisions</p>
       <h2 class="reveal section-title-sm">Who Takes the Pitch</h2>
 
-      <div class="division-row division-row--six">
-        <div class="division reveal"><h3>HS Boys Single School</h3></div>
-        <div class="division reveal"><h3>HS Boys Club Elite</h3></div>
-        <div class="division reveal"><h3>HS Boys Club Premier</h3></div>
-        <div class="division reveal"><h3>HS Girls Club Elite</h3></div>
-        <div class="division reveal"><h3>HS Girls Club Premier</h3></div>
-        <div class="division reveal"><h3>U16 Boys Elite</h3></div>
+      <div class="division-groups reveal">
+        <div class="div-group">
+          <h3 class="div-group-title">Boys</h3>
+          <ul class="div-tags">
+            <li>Single School</li>
+            <li>Club Elite</li>
+            <li>Club Premier</li>
+            <li>U16 Elite</li>
+          </ul>
+        </div>
+        <div class="div-group">
+          <h3 class="div-group-title">Girls</h3>
+          <ul class="div-tags">
+            <li>Club Elite</li>
+            <li>Club Premier</li>
+          </ul>
+        </div>
       </div>
-      <p class="division-note reveal">All players must be USA Rugby Youth &amp; High School eligible.
-      Proof of age is required at check-in. Divisions are provisional and subject to entry numbers.</p>
+      <p class="division-note reveal">Divisions are provisional and confirmed by entry numbers.
+      Proof of age is required at check-in.</p>
     </div>
   </section>
 
@@ -532,7 +524,7 @@
   </div>
 </footer>
 
-<script src="js/main.js?v=1787371148"></script>
-<script src="js/hero-sequence.js?v=1787371148"></script>
+<script src="js/main.js?v=1787441136"></script>
+<script src="js/hero-sequence.js?v=1787441136"></script>
 </body>
 </html>
