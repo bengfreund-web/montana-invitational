@@ -50,8 +50,8 @@
   /* Loading screen: hold the page until the hero has actually buffered, so the
      first thing anyone sees is the full-resolution film rather than a poster
      snapping to video. Never open-ended — LOADER_TIMEOUT_MS is the hard stop. */
-  const LOADER_TIMEOUT_MS    = 20000;
-  const LOADER_TARGET        = 0.995;  /* buffered fraction counted as "loaded" */
+  const LOADER_TIMEOUT_MS    = 8000;
+  const LOADER_TARGET        = 0.5;    /* enough of the short loop buffered to play smoothly */
   const POSTER_ONLY_UNDER_BP = false;  /* true = poster still below MOBILE_BP */
 
   /* ====================================================================== */
@@ -305,9 +305,9 @@
 
     loaderTimer = setTimeout(dismissLoader, LOADER_TIMEOUT_MS);
     video.addEventListener("error", dismissLoader);
-    video.addEventListener("canplaythrough", function () {
-      if (bufferedFraction() >= LOADER_TARGET) dismissLoader();
-    });
+    /* Open as soon as the browser can play the clip through without stalling —
+       full quality, no poster snap, but no waiting for the whole file. */
+    video.addEventListener("canplaythrough", dismissLoader);
     loaderPoll = setInterval(function () {
       var f = bufferedFraction();
       setLoaderProgress(f);
