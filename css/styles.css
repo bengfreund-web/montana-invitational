@@ -1736,3 +1736,36 @@ a.card-link:hover { text-decoration: underline; }
     color: var(--accent-text);
   }
 }
+
+/* ---------- Simplified footer: logo, event line, and the contact email ---------- */
+.footer-simple {
+  text-align: center;
+  padding: 52px 24px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.footer-simple .footer-mark { width: 200px; margin: 0 0 20px; }
+.footer-simple .footer-event-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  margin: 0 0 0.2em;
+  max-width: 26ch;
+}
+.footer-simple .footer-event-sub { font-size: 0.92rem; color: rgba(255,255,255,0.6); margin: 0; }
+.footer-email {
+  display: inline-block;
+  margin-top: 22px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.35rem, 3.4vw, 2.1rem);
+  letter-spacing: 0.01em;
+  color: var(--accent);
+}
+.footer-email:hover { text-decoration: underline; text-underline-offset: 4px; }
+.site-footer .footer-bottom { text-align: center; }
