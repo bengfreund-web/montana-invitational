@@ -1777,4 +1777,26 @@ a.partner-tile:hover {
   color: var(--accent);
 }
 .footer-email:hover { text-decoration: underline; text-underline-offset: 4px; }
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 22px;
+}
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.footer-social a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
 .site-footer .footer-bottom { text-align: center; }
