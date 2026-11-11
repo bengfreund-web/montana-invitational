@@ -29,7 +29,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=1789767087">
+<link rel="stylesheet" href="css/styles.css?v=1794415168">
 <!-- Set before first paint: CSS hides the hero copy only when JS is
      available to animate it back in, so nothing flashes on load and
      no-JS users still get the full hero. -->
@@ -110,7 +110,7 @@
           <div class="hero-divider hero-line"></div>
           <div class="hero-actions hero-line">
             <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfcyxtvMmibKBIx5zs8umNMJHdaSRjgLyagau2Ux55LMOSFIw/viewform" target="_blank" rel="noopener">Expression of Interest</a>
-            <a class="btn btn-ghost" href="https://www.zeffy.com/en-US/ticketing/2027-montana-invitational-tournament-fee" target="_blank" rel="noopener">Register &amp; Pay</a>
+            <a class="btn btn-ghost" href="https://www.zeffy.com/en-US/ticketing/2027-montana-invitational-tournament-fee" target="_blank" rel="noopener">Pay Entry Fee</a>
           </div>
         </div>
       </div>
@@ -212,12 +212,10 @@
         </div>
       </div>
 
-      <!-- Registration payment link is not set yet (open item), so the primary
-           CTA renders as a disabled "coming soon" control rather than a dead
-           link. Wire it up by swapping this span for a live <a class="btn
-           btn-primary" href="…">. -->
+      <!-- Primary CTA pays the entry fee via Zeffy. Teams register separately
+           after paying, so the label is "Pay Entry Fee", not "Register". -->
       <div class="cost-actions reveal">
-        <a class="btn btn-primary" href="https://www.zeffy.com/en-US/ticketing/2027-montana-invitational-tournament-fee" target="_blank" rel="noopener">Registration Payment</a>
+        <a class="btn btn-primary" href="https://www.zeffy.com/en-US/ticketing/2027-montana-invitational-tournament-fee" target="_blank" rel="noopener">Pay Entry Fee</a>
         <a class="btn btn-ghost" href="#interest">Expression of Interest</a>
       </div>
     </div>
@@ -460,8 +458,8 @@
   <div class="wrap">
     <p class="eyebrow partners-label reveal">Partners</p>
     <div class="partners-row">
-      <div class="partner-tile reveal"><img src="img/partners/chamber.png" alt="Bozeman Area Chamber of Commerce"></div>
-      <div class="partner-tile dark reveal"><img src="img/partners/mis.png" alt="Montana Institute of Sport"></div>
+      <a class="partner-tile reveal" href="https://bozemanchamber.com" target="_blank" rel="noopener"><img src="img/partners/chamber.png" alt="Bozeman Area Chamber of Commerce"></a>
+      <a class="partner-tile dark reveal" href="https://montanainstituteofsport.org" target="_blank" rel="noopener"><img src="img/partners/mis.png" alt="Montana Institute of Sport"></a>
     </div>
   </div>
 </section>
@@ -479,7 +477,7 @@
   </div>
 </footer>
 
-<script src="js/main.js?v=1789767087"></script>
-<script src="js/hero-sequence.js?v=1789767087"></script>
+<script src="js/main.js?v=1794415168"></script>
+<script src="js/hero-sequence.js?v=1794415168"></script>
 </body>
 </html>

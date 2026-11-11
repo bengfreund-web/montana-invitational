@@ -1575,6 +1575,15 @@ a.card-link:hover { text-decoration: underline; }
   max-width: 100%;
   object-fit: contain;
 }
+a.partner-tile {
+  text-decoration: none;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+a.partner-tile:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
 
 /* ---------- Subpage hero (referee.html, merch.html) ----------
    Stands in for the pinned video hero on the two small pages. */
